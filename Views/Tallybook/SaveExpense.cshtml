@@ -1,0 +1,98 @@
+﻿@model AspNet8Mvc_Tallybook.Models.SaveExpenseViewModel
+
+@{
+    ViewBag.Title = "儲存消費紀錄"; // 設定網頁的標題
+}
+
+
+@* 操作頁面的標題文字(Caption) *@
+<h2><span class="badge rounded-pill bg-danger">儲存解題紀錄操作頁面</span></h2>
+
+@*建立儲存消費紀錄表單*@
+<!-- asp-controller屬性為控制器名稱；asp-action屬性為控制器中的Action名稱；method屬性為表單的傳送方式 -->
+<form asp-controller="Tallybook" asp-action="SaveExpense" method="post">
+    <table>
+        <tr>
+            <td>
+                <!-- 顯示price屬性的名稱 (asp-for設定綁定的屬性為price) -->
+                <b><label asp-for="price" class="text text-primary"></label></b>
+            </td>
+            <td>
+                <!-- 顯示price屬性的輸入框 (asp-for設定綁定的屬性為price) -->
+                <!-- style="width:10em;"設定輸入框的寬度，class屬性為錯誤訊息的CSS樣式(設為有表單控制外框) -->
+                <input asp-for="price" style="width:8em;" >
+                <!-- 顯示price屬性的前端驗證錯誤訊息 (priceasp-validation-for設定綁定的屬性為price) --> 
+                <!--class屬性為錯誤訊息的CSS樣式(設為紅色文字) -->
+                <span asp-validation-for="price" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- 顯示expenseType屬性的名稱 (asp-for設定綁定的屬性為expenseType) -->
+                <b><label asp-for="expenseType" class="text text-primary"></label></b>
+            <td>
+                <!-- 顯示expenseType屬性的下拉式選單 (asp-for設定綁定的屬性為expenseType) -->
+                <!-- asp-items屬性為下拉式選單的選項清單物件 -->
+                <select asp-for="expenseType" asp-items="@Model.expenseTypeList" style="width:8em;">
+                    <option>選擇解題種類</option>
+                </select>
+                <!-- 顯示expenseType屬性的前端驗證錯誤訊息 (priceasp-validation-for設定綁定的屬性為expenseType) -->
+                <!--class屬性為錯誤訊息的CSS樣式(設為紅色文字) -->
+                <span asp-validation-for="price" class="text-danger"></span> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- 顯示comment屬性的名稱 (asp-for設定綁定的屬性為comment) -->
+                <b><label asp-for="comment" class="text text-primary"></label></b>
+            </td>
+            <td>
+                <!-- 顯示comment屬性的輸入框 (asp-for設定綁定的屬性為comment) -->
+                <!-- style="width:8em;"設定輸入框的寬度，class屬性為錯誤訊息的CSS樣式(設為有表單控制外框) -->
+                <input type="text" asp-for="comment" style="width:8em;" placeholder="請輸入消費說明">
+                <!-- 顯示comment屬性的前端驗證錯誤訊息 (priceasp-validation-for設定綁定的屬性為comment) -->
+                <!--class屬性為錯誤訊息的CSS樣式(設為紅色文字) -->
+                <span asp-validation-for="comment" class="text-danger"></span> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- 顯示payDate屬性的名稱 (asp-for設定綁定的屬性為payDate) -->
+                <b><label asp-for="payDate" class="text text-primary"></label></b>
+            </td>
+            <td>
+                <!-- 顯示payDate屬性的輸入框 (asp-for設定綁定的屬性為payDate) -->
+                <!-- style="width:8em;"設定輸入框的寬度，class屬性為錯誤訊息的CSS樣式(設為有表單控制外框) -->
+                <!--<input asp-for="payDate" style="width:8em;" class="form-control">-->
+                <input type="date" asp-for="payDate" style="width:8em;" class="form-control">
+                <script>
+                    document.getElementById('payDate').valueAsDate = new Date(); //預設日期為今天
+                </script> 
+                <!-- 顯示payDate屬性的前端驗證錯誤訊息 (priceasp-validation-for設定綁定的屬性為payDate) -->
+                <!--class屬性為錯誤訊息的CSS樣式(設為紅色文字) -->
+                <span asp-validation-for="payDate" class="text-danger"></span>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" name="btnSaveExpense" value="儲存" class="btn btn-success btn-sm">
+    <br />
+    @if (@TempData["ResultOfSaveExpense"] == null)
+    {
+        <textarea style="height:150px;width:50%;max-width: 100%;"></textarea>
+    }
+    else
+    {
+        <textarea style="height:150px;width:50%;max-width: 100%;">@TempData["ResultOfSaveExpense"]</textarea>
+    }
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+
+
+

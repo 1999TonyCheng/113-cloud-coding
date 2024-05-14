@@ -1,0 +1,20 @@
+﻿@*建立刪除消費紀錄表單*@
+<!-- asp-controller屬性為控制器名稱；asp-action屬性為控制器中的Action名稱；method屬性為表單的傳送方式 -->
+<form asp-controller="Tallybook" asp-action="DeleteExpenseType" method="post">
+    <table>
+        <tr>
+            <td>
+                <!-- 顯示expenseTypeNumber屬性的名稱 (asp-for設定綁定的屬性為expenseTypeNumber) -->
+                <b><label for="expenseTypeNumber" id="lable-expenseTypeNumber" class="text text-primary">輸入題目種類編號：</label></b>
+            </td>
+            <td>
+                <!-- 顯示expenseTypeNumber屬性的輸入框 (asp-for設定綁定的屬性為expenseTypeNumber) -->
+                <!-- style="width:8em;"設定輸入框的寬度，class屬性為錯誤訊息的CSS樣式(設為有表單控制外框) -->
+                <input type="number" id="e xpenseTypeNumber" name="expenseTypeNumber" style="width:8em;" class="form-control" />
+            </td>
+            <td>
+                <input type="submit" name="btnSend" value="刪除" class="btn btn-success btn-sm">
+            </td>
+        </tr>
+    </table>
+</form>

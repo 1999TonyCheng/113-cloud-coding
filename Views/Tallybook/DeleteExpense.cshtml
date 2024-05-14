@@ -1,0 +1,59 @@
+﻿@model AspNet8Mvc_Tallybook.Models.DeleteExpenseViewModel
+
+@{
+    ViewBag.Title = "查詢消費紀錄"; // 設定網頁的標題
+}
+
+@* 操作頁面的標題文字(Caption) *@
+<h2><span class="badge rounded-pill bg-danger">刪除解題紀錄操作頁面</span></h2>
+
+@*建立刪除消費紀錄表單*@
+<!-- asp-controller屬性為控制器名稱；asp-action屬性為控制器中的Action名稱；method屬性為表單的傳送方式 -->
+<form asp-controller="Tallybook" asp-action="DeleteExpense" method="post">
+    <table>
+        <tr>
+            <td>
+                <!-- 顯示startDate屬性的名稱 (asp-for設定綁定的屬性為startDate) -->
+                <b><label asp-for="startDate" class="text text-primary"></label></b>
+            </td>
+            <td>
+                <!-- 顯示startDate屬性的輸入框 (asp-for設定綁定的屬性為startDate) -->
+                <!-- style="width:8em;"設定輸入框的寬度，class屬性為錯誤訊息的CSS樣式(設為有表單控制外框) -->
+                <input asp-for="startDate" style="width:8em;" class="form-control">
+                <!-- 顯示startDate屬性的前端驗證錯誤訊息 (priceasp-validation-for設定綁定的屬性為startDate)--> 
+                <!--class屬性為錯誤訊息的CSS樣式(設為紅色文字) -->
+                <span asp-validation-for="startDate" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- 顯示endDate屬性的名稱 (asp-for設定綁定的屬性為endDate) -->
+                <b><label asp-for="endDate" class="text text-primary"></label></b>
+            </td>
+            <td>
+                <!-- 顯示endDate屬性的輸入框 (asp-for設定綁定的屬性為endDate) -->
+                <!-- style="width:8em;"設定輸入框的寬度，class屬性為錯誤訊息的CSS樣式(設為有表單控制外框) -->
+                <input asp-for="endDate" style="width:8em;" class="form-control">
+                <!-- 顯示endDate屬性的前端驗證錯誤訊息 (priceasp-validation-for設定綁定的屬性為endDate)-->
+                <!--class屬性為錯誤訊息的CSS樣式(設為紅色文字) -->
+                <span asp-validation-for="endDate" class="text-danger"></span>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" name="btnSend" value="刪除解題紀錄" class="btn btn-success btn-sm">
+    <br />
+    @if (Model == null)
+    {
+        <textarea style="height:150px;width:50%;max-width: 100%;"></textarea>
+    }
+    else
+    {
+        <textarea style="height:150px;width:50%;max-width: 100%;">@Model.result</textarea>
+    }
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

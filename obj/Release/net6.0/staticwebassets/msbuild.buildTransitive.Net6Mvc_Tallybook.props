@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Net6Mvc_Tallybook.props" />
+</Project>

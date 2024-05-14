@@ -1,0 +1,27 @@
+﻿@model AspNet8Mvc_Tallybook.Models.UploadModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>檔案上傳和下載</title>
+</head>
+<body>
+    <h1>檔案上傳</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="files" multiple />
+        <input type="submit" value="Upload" />
+    </form>
+
+    <h1>已上傳檔案</h1>
+    <ul>
+        @foreach (var fileName in Model.Files)
+        {
+            <li>
+                @fileName
+                <a href="@Url.Action("Download", "upload", new { fileName })">Download</a>
+            </li>
+        }
+    </ul>
+</body>
+</html>

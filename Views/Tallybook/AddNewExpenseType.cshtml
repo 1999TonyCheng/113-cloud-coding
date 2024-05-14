@@ -1,0 +1,23 @@
+﻿@*建立儲存消費紀錄表單*@
+<!-- asp-controller屬性為控制器名稱；asp-action屬性為控制器中的Action名稱；method屬性為表單的傳送方式 -->
+<form asp-controller="Tallybook" asp-action="AddNewExpenseType" method="post">
+    <table>
+        <tr>
+            <td>
+               <b><label for="newExpenseType" id="label-newExpenseType" class="text text-primary">輸入新的題目種類：</label></b>
+            </td>
+            <td>
+                <b><input type="text" id="newExpenseType" name="newExpenseType" style="width:8em;" class="form-control"></b>
+            </td>
+            <td>
+                <input type="submit" name="btnSend" value="新增" class="btn btn-success btn-sm">
+            </td>
+        </tr>
+    </table>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,65 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Net6Mvc_Tallybook
+build_property.RootNamespace = Net6Mvc_Tallybook
+build_property.ProjectDir = C:\Courses1112\Net6Mvc_Tallybook\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Courses1112\Net6Mvc_Tallybook
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Courses1112/Net6Mvc_Tallybook/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Courses1112/Net6Mvc_Tallybook/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Courses1112/Net6Mvc_Tallybook/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Courses1112/Net6Mvc_Tallybook/Views/Tallybook/AddNewExpenseType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFsbHlib29rXEFkZE5ld0V4cGVuc2VUeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Courses1112/Net6Mvc_Tallybook/Views/Tallybook/DeleteExpense.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFsbHlib29rXERlbGV0ZUV4cGVuc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Courses1112/Net6Mvc_Tallybook/Views/Tallybook/DeleteExpenseType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFsbHlib29rXERlbGV0ZUV4cGVuc2VUeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Courses1112/Net6Mvc_Tallybook/Views/Tallybook/ManageExpenseType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFsbHlib29rXE1hbmFnZUV4cGVuc2VUeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Courses1112/Net6Mvc_Tallybook/Views/Tallybook/QueryExpense.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFsbHlib29rXFF1ZXJ5RXhwZW5zZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Courses1112/Net6Mvc_Tallybook/Views/Tallybook/SaveExpense.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFsbHlib29rXFNhdmVFeHBlbnNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Courses1112/Net6Mvc_Tallybook/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Courses1112/Net6Mvc_Tallybook/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Courses1112/Net6Mvc_Tallybook/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-649gfhf3ix

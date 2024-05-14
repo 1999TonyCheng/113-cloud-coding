@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Net6Mvc_Tallybook.props" />
+</Project>

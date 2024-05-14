@@ -1,0 +1,31 @@
+﻿@model AspNet8Mvc_Tallybook.Models.ManageExpenseTypeViewModel
+
+@{
+    ViewBag.Title = "管理消費種類";
+}
+@* 操作頁面的標題文字(Caption) *@
+<h2><span class="badge rounded-pill bg-danger">管理解題種類操作頁面</span></h2>
+
+@*載入新增消費種類部分頁面*@
+<div id="AddNewExpenseType">
+    <partial name="~/Views/Tallybook/AddNewExpenseType.cshtml">
+</div>
+
+@*載入刪除消費種類部分頁面*@
+<div id="DeleteExpenseType">
+    <partial name="~/Views/Tallybook/DeleteExpenseType.cshtml">
+</div>
+
+@*建立儲存消費紀錄表單*@
+<!-- asp-controller屬性為控制器名稱；asp-action屬性為控制器中的Action名稱；method屬性為表單的傳送方式 -->
+<form asp-controller="Tallybook" asp-action="ManageExpenseType" method="post">
+    <input type="submit" name="btnSend" value="顯示所有題目種類" class="btn btn-success btn-sm">
+</form>
+@if (Model == null)
+{
+    <textarea style="height:200px;width:50%;max-width: 100%;"></textarea>
+}
+else
+{
+    <textarea style="height:200px;width:50%;max-width: 100%;">@Model.result</textarea>
+}
